@@ -9,6 +9,7 @@
 #import <zlib.h>
 #import "NVHGzipFile.h"
 #import "NSFileManager+NVHFileSize.h"
+#import <UIKit/UIKit.h>
 
 NSString *const NVHGzipFileZlibErrorDomain = @"io.nvh.targzip.zlib.error";
 

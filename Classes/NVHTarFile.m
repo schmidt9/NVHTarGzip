@@ -141,6 +141,8 @@
     
     [filemanager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil]; //Create path on filesystem
     
+    NSString *lastDirectoryPath = path; // we need to keep track of the last directory path, because the names for files are not full paths
+    
     unsigned long long location = 0; // Position in the file
     while (location < size) {
         [self updateProgressVirtualCompletedUnitCount:location];
@@ -154,8 +156,15 @@
 #ifdef TAR_VERBOSE_LOG_MODE
                     NSLog(@"UNTAR - file - %@", name);
 #endif
-                    NSString *filePath = [path stringByAppendingPathComponent:name]; // Create a full path from the name
-                    
+                    NSString *filePath = nil;
+                    if (name.length && [[name substringToIndex:1] isEqualToString:@"."]) {
+                        // if name starts with dot then it's a full path
+                        filePath = [path stringByAppendingPathComponent:name]; // Create a full path from the name
+                    } else {
+                        // else it's a file relative to the last directory
+                        filePath = [lastDirectoryPath stringByAppendingPathComponent:[name lastPathComponent]]; // Create a full path from the name and last directory path
+                    }
+
                     unsigned long long objectSize = [NVHTarFile sizeForObject:object atOffset:location];
                     
                     if (objectSize == 0 && name.length) {
@@ -179,20 +188,23 @@
                     
                     // The name field is the file name of the file,
                     // with directory names (if any) preceding the file name, separated by slashes.
-                    if ([name lastPathComponent].length != name.length) {
-                        NSString *directoryPath = [[path stringByAppendingPathComponent:name]
-                                                   stringByDeletingLastPathComponent];
-                        NSError *createError;
-                        BOOL created = [filemanager createDirectoryAtPath:directoryPath
-                                              withIntermediateDirectories:YES
-                                                               attributes:nil
-                                                                    error:&createError];
-                        if (!created) {
-#ifdef TAR_VERBOSE_LOG_MODE
-                            NSLog(@"UNTAR - error during writing empty_file - %@", createError);
-#endif
-                        }
-                    }
+                    //
+                    // commented out because it's not needed with the proper directory handling (with lastDirectoryPath)
+                    //
+//                    if ([name lastPathComponent].length != name.length) {
+//                        NSString *directoryPath = [[path stringByAppendingPathComponent:name]
+//                                                   stringByDeletingLastPathComponent];
+//                        NSError *createError;
+//                        BOOL created = [filemanager createDirectoryAtPath:directoryPath
+//                                              withIntermediateDirectories:YES
+//                                                               attributes:nil
+//                                                                    error:&createError];
+//                        if (!created) {
+//#ifdef TAR_VERBOSE_LOG_MODE
+//                            NSLog(@"UNTAR - error during writing empty_file - %@", createError);
+//#endif
+//                        }
+//                    }
                     
                     [self writeFileDataForObject:object
                                       atLocation:(location + TAR_BLOCK_SIZE)
@@ -221,6 +233,7 @@
                         NSLog(@"UNTAR - error during creating a directrory - %@", createError);
 #endif
                     }
+                    lastDirectoryPath = directoryPath;
                 }
                 break;
             }
