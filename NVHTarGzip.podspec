@@ -22,4 +22,8 @@ Pod::Spec.new do |s|
 
   s.library = 'z'
 
+  # fix for "Cannot code sign because the target does not have an Info.plist file"
+  # when using pod lint validation
+  s.pod_target_xcconfig = { 'CODE_SIGNING_ALLOWED' => 'NO' }
+
 end
