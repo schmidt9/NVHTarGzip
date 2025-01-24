@@ -19,7 +19,20 @@
 		B363D95718E2E9B3002FF42C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B363D95618E2E9B3002FF42C /* Images.xcassets */; };
 		BCFB59281AADDCFB00230695 /* misc.forsale.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = BCFB59271AADDCFB00230695 /* misc.forsale.tar.gz */; };
 		BCFB592A1AADEEDE00230695 /* misc.forsale.tar in Resources */ = {isa = PBXBuildFile; fileRef = BCFB59291AADEEDE00230695 /* misc.forsale.tar */; };
+		CEBE74182D43AF050073DE9F /* NVHTarGzipExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBE74162D43AF050073DE9F /* NVHTarGzipExampleTests.m */; };
+		CEBE741A2D43B3E10073DE9F /* libPods-NVHTarGzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBE74192D43B3E10073DE9F /* libPods-NVHTarGzip.a */; };
+		CEBE741C2D43B75A0073DE9F /* nonascii_file_names.tar in Resources */ = {isa = PBXBuildFile; fileRef = CEBE741B2D43B75A0073DE9F /* nonascii_file_names.tar */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEBE74112D43AEFC0073DE9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B363D93318E2E9B3002FF42C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B363D93A18E2E9B3002FF42C;
+			remoteInfo = NVHTarGzipExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		20E578C175794AD3A4ED8E1D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +54,10 @@
 		B363D95D18E2E9B3002FF42C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BCFB59271AADDCFB00230695 /* misc.forsale.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = misc.forsale.tar.gz; sourceTree = "<group>"; };
 		BCFB59291AADEEDE00230695 /* misc.forsale.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = misc.forsale.tar; sourceTree = "<group>"; };
+		CEBE740D2D43AEFB0073DE9F /* NVHTarGzipExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NVHTarGzipExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBE74162D43AF050073DE9F /* NVHTarGzipExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVHTarGzipExampleTests.m; sourceTree = "<group>"; };
+		CEBE74192D43B3E10073DE9F /* libPods-NVHTarGzip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-NVHTarGzip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBE741B2D43B75A0073DE9F /* nonascii_file_names.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = nonascii_file_names.tar; sourceTree = "<group>"; };
 		E1ABF667B52F0CA5459A48CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +70,14 @@
 				B363D94318E2E9B3002FF42C /* UIKit.framework in Frameworks */,
 				B363D93F18E2E9B3002FF42C /* Foundation.framework in Frameworks */,
 				1A2629556050477BA17C1E68 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBE740A2D43AEFB0073DE9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBE741A2D43B3E10073DE9F /* libPods-NVHTarGzip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B363D94418E2E9B3002FF42C /* NVHTarGzipExample */,
+				CEBE74172D43AF050073DE9F /* NVHTarGzipExampleTests */,
 				B363D93D18E2E9B3002FF42C /* Frameworks */,
 				B363D93C18E2E9B3002FF42C /* Products */,
 				2142715E3759D323951A845E /* Pods */,
@@ -82,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B363D93B18E2E9B3002FF42C /* NVHTarGzipExample.app */,
+				CEBE740D2D43AEFB0073DE9F /* NVHTarGzipExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +116,7 @@
 		B363D93D18E2E9B3002FF42C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEBE74192D43B3E10073DE9F /* libPods-NVHTarGzip.a */,
 				B363D93E18E2E9B3002FF42C /* Foundation.framework */,
 				B363D94018E2E9B3002FF42C /* CoreGraphics.framework */,
 				B363D94218E2E9B3002FF42C /* UIKit.framework */,
@@ -115,6 +143,7 @@
 		B363D94518E2E9B3002FF42C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEBE741B2D43B75A0073DE9F /* nonascii_file_names.tar */,
 				BCFB59291AADEEDE00230695 /* misc.forsale.tar */,
 				BCFB59271AADDCFB00230695 /* misc.forsale.tar.gz */,
 				B363D94618E2E9B3002FF42C /* NVHTarGzipExample-Info.plist */,
@@ -123,6 +152,14 @@
 				B363D94C18E2E9B3002FF42C /* NVHTarGzipExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEBE74172D43AF050073DE9F /* NVHTarGzipExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEBE74162D43AF050073DE9F /* NVHTarGzipExampleTests.m */,
+			);
+			path = NVHTarGzipExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +184,26 @@
 			productReference = B363D93B18E2E9B3002FF42C /* NVHTarGzipExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CEBE740C2D43AEFB0073DE9F /* NVHTarGzipExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEBE74152D43AEFC0073DE9F /* Build configuration list for PBXNativeTarget "NVHTarGzipExampleTests" */;
+			buildPhases = (
+				CEBE74092D43AEFB0073DE9F /* Sources */,
+				CEBE740A2D43AEFB0073DE9F /* Frameworks */,
+				CEBE740B2D43AEFB0073DE9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEBE74122D43AEFC0073DE9F /* PBXTargetDependency */,
+			);
+			name = NVHTarGzipExampleTests;
+			packageProductDependencies = (
+			);
+			productName = NVHTarGzipExampleTests;
+			productReference = CEBE740D2D43AEFB0073DE9F /* NVHTarGzipExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +217,12 @@
 					B363D93A18E2E9B3002FF42C = {
 						DevelopmentTeam = 729WVZ5N33;
 					};
+					CEBE740C2D43AEFB0073DE9F = {
+						CreatedOnToolsVersion = 16.2;
+						DevelopmentTeam = ZNCGWW299S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B363D93A18E2E9B3002FF42C;
+					};
 				};
 			};
 			buildConfigurationList = B363D93618E2E9B3002FF42C /* Build configuration list for PBXProject "NVHTarGzipExample" */;
@@ -167,6 +230,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -176,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				B363D93A18E2E9B3002FF42C /* NVHTarGzipExample */,
+				CEBE740C2D43AEFB0073DE9F /* NVHTarGzipExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,7 +254,15 @@
 				BCFB59281AADDCFB00230695 /* misc.forsale.tar.gz in Resources */,
 				B363D94918E2E9B3002FF42C /* InfoPlist.strings in Resources */,
 				BCFB592A1AADEEDE00230695 /* misc.forsale.tar in Resources */,
+				CEBE741C2D43B75A0073DE9F /* nonascii_file_names.tar in Resources */,
 				B363D95218E2E9B3002FF42C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBE740B2D43AEFB0073DE9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +312,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEBE74092D43AEFB0073DE9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBE74182D43AF050073DE9F /* NVHTarGzipExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEBE74122D43AEFC0073DE9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B363D93A18E2E9B3002FF42C /* NVHTarGzipExample */;
+			targetProxy = CEBE74112D43AEFC0073DE9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B363D94718E2E9B3002FF42C /* InfoPlist.strings */ = {
@@ -341,6 +430,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NVHTarGzipExample/NVHTarGzipExample-Prefix.pch";
 				INFOPLIST_FILE = "NVHTarGzipExample/NVHTarGzipExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -356,8 +446,103 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NVHTarGzipExample/NVHTarGzipExample-Prefix.pch";
 				INFOPLIST_FILE = "NVHTarGzipExample/NVHTarGzipExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CEBE74132D43AEFC0073DE9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mingli.NVHTarGzipExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NVHTarGzipExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NVHTarGzipExample";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Classes";
+			};
+			name = Debug;
+		};
+		CEBE74142D43AEFC0073DE9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZNCGWW299S;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mingli.NVHTarGzipExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NVHTarGzipExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NVHTarGzipExample";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Classes";
 			};
 			name = Release;
 		};
@@ -378,6 +563,15 @@
 			buildConfigurations = (
 				B363D96E18E2E9B3002FF42C /* Debug */,
 				B363D96F18E2E9B3002FF42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEBE74152D43AEFC0073DE9F /* Build configuration list for PBXNativeTarget "NVHTarGzipExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEBE74132D43AEFC0073DE9F /* Debug */,
+				CEBE74142D43AEFC0073DE9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
